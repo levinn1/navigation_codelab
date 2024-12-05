@@ -25,15 +25,11 @@ The application also uses a **Drawer** for consistent navigation across screens,
 3. Set up Flutter in your editor (e.g., **VS Code** or **Android Studio**).
 
 ### Steps:
-1. Clone the repository:
-   `git clone https://github.com/USERNAME/REPOSITORY_NAME.git`
-   Replace `USERNAME` and `REPOSITORY_NAME` with your GitHub username and repository name.
+1. Clone the repository
 
 2. Navigate to the project directory:
-   `cd REPOSITORY_NAME`
 
 3. Run `flutter pub get` to install the necessary dependencies:
-   `flutter pub get`
 
 4. Start the application:
    `flutter run`
