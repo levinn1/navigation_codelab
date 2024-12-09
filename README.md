@@ -1,16 +1,52 @@
-# navigation_codelab
+# Flutter Routes & Navigation
 
-A new Flutter project.
+This Flutter application demonstrates how to create a multi-screen app with named routes and navigation between different screens. The app includes three screens:
+1. **First Screen**: Light blue background, includes buttons to navigate to the second and third screens.
+2. **Second Screen**: Light green background, includes buttons to navigate back to the first screen or to the third screen.
+3. **Third Screen**: Orange background, includes buttons to navigate back to the first or second screens.
 
-## Getting Started
+The application also uses a **Drawer** for consistent navigation across screens, with the navigation menu replacing the back arrow on the second and third screens.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Multi-screen app with named routes.
+- Consistent navigation using a **Drawer**.
+- Different background colors for each screen for better UI clarity.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## How to Run the Application
+
+### Prerequisites:
+1. Install **Flutter** by following the instructions at [flutter.dev](https://flutter.dev/docs/get-started/install).
+2. Ensure that you have an emulator (like Android Studio, iOS Simulator) or a physical device connected.
+3. Set up Flutter in your editor (e.g., **VS Code** or **Android Studio**).
+
+### Steps:
+1. Clone the repository
+
+2. Navigate to the project directory:
+
+3. Run `flutter pub get` to install the necessary dependencies:
+
+4. Start the application:
+   `flutter run`
+
+   - This will build and launch the application on the connected device or emulator.
+
+---
+
+## How to Use the Application
+
+1. Launch the app.
+2. Use the **buttons** on the First, Second, or Third screen to navigate between screens.
+3. Open the **Drawer** (navigation menu) from any screen to navigate directly to a specific screen.
+4. Each screen has a different background color to identify it visually:
+   - **First Screen**: Light Blue
+   - **Second Screen**: Light Green
+   - **Third Screen**: Orange
+
+---
+
