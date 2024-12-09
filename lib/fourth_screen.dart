@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
+class FourthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Screen'),
+        title: Text('Fourth Screen'),
         leading: Builder(
           builder: (context) {
             return IconButton(
@@ -42,7 +42,7 @@ class SecondScreen extends StatelessWidget {
             ListTile(
               title: Text('Second Screen'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/second');
               },
             ),
             ListTile(
@@ -54,14 +54,14 @@ class SecondScreen extends StatelessWidget {
             ListTile(
               title: Text('Fourth Screen'),
               onTap: () {
-                Navigator.pushNamed(context, '/fourth');
+                Navigator.pop(context);
               },
             ),
           ],
         ),
       ),
       body: Container(
-        color: Colors.lightGreen[100],
+        color: Colors.purple[100],
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -71,13 +71,6 @@ class SecondScreen extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Text('Go Back'),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/third');
-                },
-                child: Text('Go to Third Screen'),
               ),
             ],
           ),

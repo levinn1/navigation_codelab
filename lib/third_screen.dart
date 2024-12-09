@@ -9,9 +9,9 @@ class ThirdScreen extends StatelessWidget {
         leading: Builder(
           builder: (context) {
             return IconButton(
-              icon: Icon(Icons.menu), // Navigation menu icon
+              icon: Icon(Icons.menu),
               onPressed: () {
-                Scaffold.of(context).openDrawer(); // Open the drawer
+                Scaffold.of(context).openDrawer();
               },
             );
           },
@@ -48,30 +48,36 @@ class ThirdScreen extends StatelessWidget {
             ListTile(
               title: Text('Third Screen'),
               onTap: () {
-                Navigator.pop(context); // Close drawer if already on Third Screen
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Fourth Screen'),
+              onTap: () {
+                Navigator.pushNamed(context, '/fourth');
               },
             ),
           ],
         ),
       ),
       body: Container(
-        color: Colors.orange[100], // Orange background
+        color: Colors.orange[100],
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pop(context);
                 },
-                child: Text('Go Back to First Screen'),
+                child: Text('Go Back'),
               ),
-              SizedBox(height: 20), // Add a gap of 20 pixels
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/second');
+                  Navigator.pushNamed(context, '/fourth');
                 },
-                child: Text('Go to Second Screen'),
+                child: Text('Go to Fourth Screen'),
               ),
             ],
           ),

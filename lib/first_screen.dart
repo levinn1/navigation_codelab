@@ -4,7 +4,9 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('First Screen')),
+      appBar: AppBar(
+        title: Text('First Screen'),
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -24,7 +26,7 @@ class FirstScreen extends StatelessWidget {
             ListTile(
               title: Text('First Screen'),
               onTap: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -39,29 +41,40 @@ class FirstScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/third');
               },
             ),
+            ListTile(
+              title: Text('Fourth Screen'),
+              onTap: () {
+                Navigator.pushNamed(context, '/fourth');
+              },
+            ),
           ],
         ),
       ),
       body: Container(
-        color: Colors.lightBlue[100], // Light blue background
+        color: Colors.lightBlue[100],
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
-                  // Navigate to the second screen using named route
                   Navigator.pushNamed(context, '/second');
                 },
                 child: Text('Go to Second Screen'),
               ),
-              SizedBox(height: 20), // Add a gap of 20 pixels
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Navigate to the third screen using named route
                   Navigator.pushNamed(context, '/third');
                 },
                 child: Text('Go to Third Screen'),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/fourth');
+                },
+                child: Text('Go to Fourth Screen'),
               ),
             ],
           ),
